@@ -1,0 +1,18 @@
+<h1>hola vistes</h1>
+
+<p>Para eso existe el método de ayuda form_tag y los campos que terminan en _tag:</p>
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<table border="1">
+  <thead>
+  </thead>
+  <tbody>
+    <%= @numeros.each do |book| %>
+    <div> <% book[1] %> </div>
+    <% end %>
+  </tbody>
+</table>
