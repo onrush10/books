@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   root 'books#index'
   resources :books
+  resources :vaccines
 
   get '/prueba', to: 'prueba#form'
 end  

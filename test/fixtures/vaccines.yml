@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  lote: MyString
+  fecha_vencimiento: MyString
+  stock: MyString
+
+two:
+  nombre: MyString
+  lote: MyString
+  fecha_vencimiento: MyString
+  stock: MyString

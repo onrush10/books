@@ -1,0 +1,22 @@
+<h1>Editar Vacuna</h1>
+<%= form_for @vaccine do |f| %>
+  <div>
+    <%= f.label :Nombre %>
+    <%= f.text_field :nombre %>
+  </div>
+  <div>
+    <%= f.label :Lote %>
+    <%= f.text_field :lote %>
+  </div>
+  <div>
+    <%= f.label :fecha_vencimiento %>
+    <%= f.date_field :fecha_vencimiento %>
+  </div>
+  <div>
+    <%= f.label :Stock %>
+    <%= f.text_field :stock %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>

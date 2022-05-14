@@ -1,0 +1,32 @@
+<h1>VACUNAS</h1>
+<table border="1" class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Lote</th>
+      <th>Fecha de Vencimiento</th>
+      <th>Stock</th>
+      <th>Días al vencimiento</th>
+      <th>Acción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @vaccines.each do |vaccine| %>
+      <tr>
+        <td><%= vaccine.nombre %></td>
+        <td><%= vaccine.lote %></td>
+        <td><%= vaccine.fecha_vencimiento %></td>
+        <td><%= vaccine.stock %></td>
+        <td><%= Time.new %></td>
+        <td>
+          <%= link_to "Mostrar", vaccine %>
+          <%= link_to "Editar", edit_vaccine_path(vaccine) %>
+          <%= link_to "Eliminar", vaccine, method: :delete, data: { confirm: "¿Estás seguro de eliminar este libro?" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div><%= link_to "Ir Prueba form", prueba_path %></div>
+<%= link_to "Nueva Vacuna", new_vaccine_path %>
